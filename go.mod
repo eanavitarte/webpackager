@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/WICG/webpackage v0.0.0-20200508035339-83a83ee876eb
-	github.com/go-acme/lego/v3 v3.7.0
+	github.com/go-acme/lego/v3 v3.9.0
 	github.com/gofrs/flock v0.7.1
 	github.com/google/go-cmp v0.5.0
 	github.com/google/renameio v0.1.0

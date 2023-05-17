@@ -240,6 +240,8 @@ func (c *Client) Fetch(chain *certchain.RawChain, now func() time.Time) (newChai
 
 	// Each resource comes back with the cert bytes, the bytes of the client's
 	// private key, and a certificate URL.
+	fmt.Println("Obtaining new Certs")
+	fmt.Println(c.LegoClient.Certificate)
 	resource, err := c.LegoClient.Certificate.ObtainForCSR(*c.CertSignRequest, true)
 	if err != nil {
 		return nil, c.FetchTiming.GetNextRun(), err
