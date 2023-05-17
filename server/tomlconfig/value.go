@@ -21,7 +21,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/google/webpackager/internal/urlutil"
+	"github.com/eanavitarte/webpackager/internal/urlutil"
 	"golang.org/x/xerrors"
 )
 

@@ -19,14 +19,14 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/eanavitarte/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange/exchangetest"
+	"github.com/eanavitarte/webpackager/processor/htmlproc"
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmldoc"
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmltask"
+	"github.com/eanavitarte/webpackager/resource/preload"
+	"github.com/eanavitarte/webpackager/resource/preload/preloadtest"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/exchange"
-	"github.com/google/webpackager/exchange/exchangetest"
-	"github.com/google/webpackager/processor/htmlproc"
-	"github.com/google/webpackager/processor/htmlproc/htmldoc"
-	"github.com/google/webpackager/processor/htmlproc/htmltask"
-	"github.com/google/webpackager/resource/preload"
-	"github.com/google/webpackager/resource/preload/preloadtest"
 )
 
 func makeResponse(url, html string) *exchange.Response {

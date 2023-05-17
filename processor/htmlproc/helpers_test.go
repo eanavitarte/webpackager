@@ -15,8 +15,8 @@
 package htmlproc_test
 
 import (
-	"github.com/google/webpackager/processor/htmlproc/htmldoc"
-	"github.com/google/webpackager/processor/htmlproc/htmltask"
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmldoc"
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmltask"
 )
 
 type HTMLTaskFunc func(*htmldoc.HTMLResponse) error

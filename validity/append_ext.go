@@ -21,18 +21,18 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/google/webpackager/exchange"
-	"github.com/google/webpackager/internal/urlutil"
+	"github.com/eanavitarte/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/internal/urlutil"
 )
 
 // AppendExtDotLastModified generates the validity URL by appending ext
 // and the resource's last modified time. For example:
 //
-//     https://example.com/index.html
+//	https://example.com/index.html
 //
 // would receive a validity URL that looks like:
 //
-//     https://example.com/index.html.validity.1561984496
+//	https://example.com/index.html.validity.1561984496
 //
 // ext usually starts with a dot ("."). AppendExtDotExchangeDate does not
 // insert it automatically. ext is thus ".validity" rather than "validity"

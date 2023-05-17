@@ -15,7 +15,7 @@
 package htmldoc
 
 import (
-	"github.com/google/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange"
 )
 
 // HTMLResponse is an extension of exchange.Response for HTML responses.

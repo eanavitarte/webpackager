@@ -18,8 +18,8 @@ package preload
 import (
 	"net/url"
 
-	"github.com/google/webpackager/resource"
-	"github.com/google/webpackager/resource/httplink"
+	"github.com/eanavitarte/webpackager/resource"
+	"github.com/eanavitarte/webpackager/resource/httplink"
 )
 
 // Values for the "as" attribute of preload links.

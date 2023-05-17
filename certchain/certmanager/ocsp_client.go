@@ -21,8 +21,8 @@ import (
 	"time"
 
 	"github.com/WICG/webpackage/go/signedexchange/certurl"
-	"github.com/google/webpackager/certchain"
-	"github.com/google/webpackager/certchain/certmanager/futureevent"
+	"github.com/eanavitarte/webpackager/certchain"
+	"github.com/eanavitarte/webpackager/certchain/certmanager/futureevent"
 	"github.com/jpillora/backoff"
 	"github.com/pquerna/cachecontrol"
 )

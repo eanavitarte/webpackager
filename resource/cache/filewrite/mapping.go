@@ -19,8 +19,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/google/webpackager/internal/urlutil"
-	"github.com/google/webpackager/resource"
+	"github.com/eanavitarte/webpackager/internal/urlutil"
+	"github.com/eanavitarte/webpackager/resource"
 )
 
 var (

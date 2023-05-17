@@ -20,9 +20,9 @@ import (
 	"net/url"
 	"testing"
 
+	"github.com/eanavitarte/webpackager/fetch"
+	"github.com/eanavitarte/webpackager/urlmatcher"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/fetch"
-	"github.com/google/webpackager/urlmatcher"
 )
 
 func TestSelector(t *testing.T) {

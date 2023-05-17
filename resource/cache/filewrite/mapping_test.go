@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/google/webpackager/internal/urlutil"
-	"github.com/google/webpackager/resource"
-	"github.com/google/webpackager/resource/cache/filewrite"
+	"github.com/eanavitarte/webpackager/internal/urlutil"
+	"github.com/eanavitarte/webpackager/resource"
+	"github.com/eanavitarte/webpackager/resource/cache/filewrite"
 )
 
 func TestUseURLPathRules_Success(t *testing.T) {

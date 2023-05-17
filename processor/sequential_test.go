@@ -18,9 +18,9 @@ import (
 	"errors"
 	"testing"
 
+	"github.com/eanavitarte/webpackager/exchange/exchangetest"
+	"github.com/eanavitarte/webpackager/processor"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/exchange/exchangetest"
-	"github.com/google/webpackager/processor"
 )
 
 func TestSequentialProcessor(t *testing.T) {

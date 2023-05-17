@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/webpackager/certchain/certmanager/futureevent"
+	"github.com/eanavitarte/webpackager/certchain/certmanager/futureevent"
 )
 
 func TestOnSignal(t *testing.T) {

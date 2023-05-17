@@ -19,7 +19,7 @@ package vprule
 import (
 	"time"
 
-	"github.com/google/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange"
 )
 
 // DefaultRule is the default rule used by webpackager.Packager.

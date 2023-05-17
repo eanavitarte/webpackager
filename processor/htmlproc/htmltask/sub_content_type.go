@@ -15,8 +15,8 @@
 package htmltask
 
 import (
-	"github.com/google/webpackager/exchange"
-	"github.com/google/webpackager/processor/htmlproc/htmldoc"
+	"github.com/eanavitarte/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmldoc"
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"
 )

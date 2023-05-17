@@ -21,15 +21,15 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/eanavitarte/webpackager/certchain"
+	"github.com/eanavitarte/webpackager/certchain/certmanager"
+	"github.com/eanavitarte/webpackager/certchain/certmanager/futureevent"
 	"github.com/go-acme/lego/v3/certcrypto"
 	"github.com/go-acme/lego/v3/challenge/http01"
 	"github.com/go-acme/lego/v3/challenge/tlsalpn01"
 	"github.com/go-acme/lego/v3/lego"
 	"github.com/go-acme/lego/v3/providers/http/webroot"
 	"github.com/go-acme/lego/v3/registration"
-	"github.com/google/webpackager/certchain"
-	"github.com/google/webpackager/certchain/certmanager"
-	"github.com/google/webpackager/certchain/certmanager/futureevent"
 	"golang.org/x/xerrors"
 )
 
@@ -65,7 +65,7 @@ var _ certmanager.RawChainSource = (*Client)(nil)
 // https://letsencrypt.org/docs/challenge-types/ describes these challenges
 // in greater detail.
 //
-// Port Usage
+// # Port Usage
 //
 // Client uses HTTPChallengePort or TLSChallengePort, while the ACME protocol
 // requires the HTTP and TLS challenge responders to listen on the standard

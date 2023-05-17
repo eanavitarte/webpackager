@@ -18,8 +18,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/google/webpackager/certchain/certmanager/futureevent"
-	"github.com/google/webpackager/internal/timeutil"
+	"github.com/eanavitarte/webpackager/certchain/certmanager/futureevent"
+	"github.com/eanavitarte/webpackager/internal/timeutil"
 )
 
 // FetchHourly makes Fetch called every hour.

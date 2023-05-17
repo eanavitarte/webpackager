@@ -18,7 +18,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/google/webpackager/internal/urlutil"
+	"github.com/eanavitarte/webpackager/internal/urlutil"
 )
 
 func TestGetCleanPath(t *testing.T) {

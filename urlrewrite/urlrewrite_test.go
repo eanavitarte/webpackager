@@ -19,7 +19,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/google/webpackager/urlrewrite"
+	"github.com/eanavitarte/webpackager/urlrewrite"
 )
 
 func TestRuleSequence(t *testing.T) {

@@ -17,7 +17,7 @@ package validity
 import (
 	"net/url"
 
-	"github.com/google/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange"
 )
 
 // FixedURL uses url as the validity URL for all resources. It is useful,

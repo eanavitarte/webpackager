@@ -15,8 +15,8 @@
 package processor_test
 
 import (
-	"github.com/google/webpackager/processor"
-	"github.com/google/webpackager/processor/htmlproc"
+	"github.com/eanavitarte/webpackager/processor"
+	"github.com/eanavitarte/webpackager/processor/htmlproc"
 )
 
 func ExampleMultiplexedProcessor() {

@@ -19,7 +19,7 @@
 package preverify
 
 import (
-	"github.com/google/webpackager/processor"
+	"github.com/eanavitarte/webpackager/processor"
 )
 
 // Config holds the parameters to CheckPrerequisites.

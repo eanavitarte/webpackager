@@ -19,11 +19,11 @@ import (
 	"net/http"
 	"testing"
 
+	"github.com/eanavitarte/webpackager/exchange/exchangetest"
+	"github.com/eanavitarte/webpackager/processor/commonproc"
+	"github.com/eanavitarte/webpackager/resource/preload"
+	"github.com/eanavitarte/webpackager/resource/preload/preloadtest"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/exchange/exchangetest"
-	"github.com/google/webpackager/processor/commonproc"
-	"github.com/google/webpackager/resource/preload"
-	"github.com/google/webpackager/resource/preload/preloadtest"
 )
 
 func TestExtractPreloadHeaders(t *testing.T) {

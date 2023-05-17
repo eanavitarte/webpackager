@@ -17,8 +17,8 @@ package htmltask_test
 import (
 	"fmt"
 
-	"github.com/google/webpackager/exchange/exchangetest"
-	"github.com/google/webpackager/processor/htmlproc/htmldoc"
+	"github.com/eanavitarte/webpackager/exchange/exchangetest"
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmldoc"
 )
 
 // makeHTMLResponse returns a new htmldoc.HTMLResponse with a new GET request.

@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/webpackager/internal/chanutil"
+	"github.com/eanavitarte/webpackager/internal/chanutil"
 )
 
 func TestKiller(t *testing.T) {

@@ -15,7 +15,7 @@
 package processor
 
 import (
-	"github.com/google/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange"
 )
 
 // Processor scans and maybe modifies the provided Response.

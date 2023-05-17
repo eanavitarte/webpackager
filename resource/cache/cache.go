@@ -19,7 +19,7 @@ package cache
 import (
 	"net/http"
 
-	"github.com/google/webpackager/resource"
+	"github.com/eanavitarte/webpackager/resource"
 )
 
 // ResourceCache caches resource.Resources.

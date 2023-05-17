@@ -18,7 +18,7 @@ import (
 	"log"
 	"net/url"
 
-	"github.com/google/webpackager/processor/htmlproc/htmldoc"
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmldoc"
 	"golang.org/x/net/html"
 )
 

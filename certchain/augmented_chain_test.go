@@ -21,8 +21,8 @@ import (
 	"io/ioutil"
 	"testing"
 
+	"github.com/eanavitarte/webpackager/certchain"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/certchain"
 )
 
 func TestReadAugmentedChain_Issued(t *testing.T) {

@@ -19,7 +19,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/google/webpackager/urlmatcher"
+	"github.com/eanavitarte/webpackager/urlmatcher"
 )
 
 // ErrURLMismatch is returned by WithSelector clients when the request URL
@@ -47,7 +47,7 @@ func (w *withSelector) Do(req *http.Request) (*http.Response, error) {
 // Selector is a urlmatcher.Matcher designed for use with WithSelector. It is
 // almost equivalent to
 //
-//     AllOf(AnyOf(Allow...), Not(AnyOf(Deny...)))
+//	AllOf(AnyOf(Allow...), Not(AnyOf(Deny...)))
 //
 // but empty Allow is interpreted as "allow any." Empty Deny is interpreted
 // as "deny none," like AnyOf(empty). Using Selector with WithSelector makes

@@ -17,9 +17,9 @@ package httplink_test
 import (
 	"testing"
 
+	"github.com/eanavitarte/webpackager/internal/urlutil"
+	"github.com/eanavitarte/webpackager/resource/httplink"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/internal/urlutil"
-	"github.com/google/webpackager/resource/httplink"
 )
 
 func TestParse(t *testing.T) {

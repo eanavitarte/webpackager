@@ -18,10 +18,10 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/google/webpackager/exchange"
-	"github.com/google/webpackager/exchange/exchangetest"
-	"github.com/google/webpackager/internal/urlutil"
-	"github.com/google/webpackager/validity"
+	"github.com/eanavitarte/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange/exchangetest"
+	"github.com/eanavitarte/webpackager/internal/urlutil"
+	"github.com/eanavitarte/webpackager/validity"
 )
 
 func TestFixedURL(t *testing.T) {

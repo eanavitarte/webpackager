@@ -19,7 +19,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/webpackager/internal/urlutil"
+	"github.com/eanavitarte/webpackager/internal/urlutil"
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"
 )

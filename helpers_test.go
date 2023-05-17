@@ -21,9 +21,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/eanavitarte/webpackager"
+	"github.com/eanavitarte/webpackager/fetch/fetchtest"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager"
-	"github.com/google/webpackager/fetch/fetchtest"
 	multierror "github.com/hashicorp/go-multierror"
 )
 

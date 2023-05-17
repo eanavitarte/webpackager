@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/eanavitarte/webpackager/certchain"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/certchain"
 )
 
 var (

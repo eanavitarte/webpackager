@@ -17,7 +17,7 @@ package cache_test
 import (
 	"testing"
 
-	"github.com/google/webpackager/resource/cache"
+	"github.com/eanavitarte/webpackager/resource/cache"
 )
 
 func TestBoundedCache_LRU(t *testing.T) {

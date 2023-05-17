@@ -19,8 +19,8 @@ import (
 	"net/http"
 	"testing"
 
+	"github.com/eanavitarte/webpackager/fetch"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/fetch"
 )
 
 func newGetRequest(url string) *http.Request {

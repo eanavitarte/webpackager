@@ -19,10 +19,10 @@ import (
 	"net/http"
 	"testing"
 
+	"github.com/eanavitarte/webpackager/exchange/exchangetest"
+	"github.com/eanavitarte/webpackager/processor"
+	"github.com/eanavitarte/webpackager/processor/preverify"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/exchange/exchangetest"
-	"github.com/google/webpackager/processor"
-	"github.com/google/webpackager/processor/preverify"
 )
 
 func TestHTTPStatusCode_Success(t *testing.T) {

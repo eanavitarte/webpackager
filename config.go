@@ -15,14 +15,14 @@
 package webpackager
 
 import (
-	"github.com/google/webpackager/exchange"
-	"github.com/google/webpackager/exchange/vprule"
-	"github.com/google/webpackager/fetch"
-	"github.com/google/webpackager/processor"
-	"github.com/google/webpackager/processor/complexproc"
-	"github.com/google/webpackager/resource/cache"
-	"github.com/google/webpackager/urlrewrite"
-	"github.com/google/webpackager/validity"
+	"github.com/eanavitarte/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange/vprule"
+	"github.com/eanavitarte/webpackager/fetch"
+	"github.com/eanavitarte/webpackager/processor"
+	"github.com/eanavitarte/webpackager/processor/complexproc"
+	"github.com/eanavitarte/webpackager/resource/cache"
+	"github.com/eanavitarte/webpackager/urlrewrite"
+	"github.com/eanavitarte/webpackager/validity"
 )
 
 // Config defines injection points to Packager.

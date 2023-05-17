@@ -17,9 +17,9 @@ package certmanager_test
 import (
 	"testing"
 
+	"github.com/eanavitarte/webpackager/certchain/certmanager"
+	"github.com/eanavitarte/webpackager/internal/certchaintest"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/certchain/certmanager"
-	"github.com/google/webpackager/internal/certchaintest"
 )
 
 func TestManager(t *testing.T) {

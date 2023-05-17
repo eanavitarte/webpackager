@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/google/webpackager/exchange/exchangetest"
-	"github.com/google/webpackager/processor"
-	"github.com/google/webpackager/processor/preverify"
+	"github.com/eanavitarte/webpackager/exchange/exchangetest"
+	"github.com/eanavitarte/webpackager/processor"
+	"github.com/eanavitarte/webpackager/processor/preverify"
 )
 
 func TestMaxContentLength_Success(t *testing.T) {

@@ -17,7 +17,7 @@ package cache
 import (
 	"net/http"
 
-	"github.com/google/webpackager/resource"
+	"github.com/eanavitarte/webpackager/resource"
 )
 
 // NilCache returns a ResourceCache that stores and retrieves nothing.

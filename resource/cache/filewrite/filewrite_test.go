@@ -23,9 +23,9 @@ import (
 	"testing"
 
 	"github.com/WICG/webpackage/go/signedexchange"
-	"github.com/google/webpackager/resource"
-	"github.com/google/webpackager/resource/cache"
-	"github.com/google/webpackager/resource/cache/filewrite"
+	"github.com/eanavitarte/webpackager/resource"
+	"github.com/eanavitarte/webpackager/resource/cache"
+	"github.com/eanavitarte/webpackager/resource/cache/filewrite"
 )
 
 func TestStore(t *testing.T) {

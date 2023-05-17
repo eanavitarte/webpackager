@@ -19,7 +19,7 @@ import (
 	"mime"
 	"time"
 
-	"github.com/google/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange"
 )
 
 // PerContentType specifies a Rule per media type. rules is a map from

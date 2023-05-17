@@ -17,10 +17,10 @@ package htmltask_test
 import (
 	"testing"
 
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmltask"
+	"github.com/eanavitarte/webpackager/resource/preload"
+	"github.com/eanavitarte/webpackager/resource/preload/preloadtest"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/processor/htmlproc/htmltask"
-	"github.com/google/webpackager/resource/preload"
-	"github.com/google/webpackager/resource/preload/preloadtest"
 )
 
 func TestPreloadStylesheets(t *testing.T) {

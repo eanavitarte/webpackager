@@ -18,8 +18,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/google/webpackager/exchange"
-	"github.com/google/webpackager/processor"
+	"github.com/eanavitarte/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/processor"
 )
 
 // ContentTypeProcessor adds the "X-Content-Type-Options: nosniff" header,

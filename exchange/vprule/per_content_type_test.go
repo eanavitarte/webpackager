@@ -20,9 +20,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/webpackager/exchange"
-	"github.com/google/webpackager/exchange/exchangetest"
-	"github.com/google/webpackager/exchange/vprule"
+	"github.com/eanavitarte/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange/exchangetest"
+	"github.com/eanavitarte/webpackager/exchange/vprule"
 )
 
 func TestPreContentType(t *testing.T) {

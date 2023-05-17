@@ -26,7 +26,7 @@ import (
 	"os"
 
 	"github.com/WICG/webpackage/go/signedexchange"
-	"github.com/google/webpackager/certchain"
+	"github.com/eanavitarte/webpackager/certchain"
 	"golang.org/x/xerrors"
 )
 

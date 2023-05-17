@@ -15,7 +15,7 @@
 package processor
 
 import (
-	"github.com/google/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange"
 )
 
 // SequentialProcessor consists of a series of subprocessors.

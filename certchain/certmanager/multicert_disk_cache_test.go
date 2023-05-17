@@ -22,8 +22,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/google/webpackager/certchain/certmanager"
-	"github.com/google/webpackager/internal/certchaintest"
+	"github.com/eanavitarte/webpackager/certchain/certmanager"
+	"github.com/eanavitarte/webpackager/internal/certchaintest"
 )
 
 func TestMultiCertDiskCacheRead(t *testing.T) {

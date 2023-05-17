@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/webpackager/certchain/certmanager/futureevent"
+	"github.com/eanavitarte/webpackager/certchain/certmanager/futureevent"
 )
 
 // In order to reduce the flakiness of the tests which deal with time,

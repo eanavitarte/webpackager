@@ -19,8 +19,8 @@ import (
 	"net/url"
 
 	"github.com/WICG/webpackage/go/signedexchange/version"
-	"github.com/google/webpackager/certchain"
-	"github.com/google/webpackager/internal/urlutil"
+	"github.com/eanavitarte/webpackager/certchain"
+	"github.com/eanavitarte/webpackager/internal/urlutil"
 )
 
 // These are the default values in Config.

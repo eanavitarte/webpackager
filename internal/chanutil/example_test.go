@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/google/webpackager/internal/chanutil"
+	"github.com/eanavitarte/webpackager/internal/chanutil"
 )
 
 func ExampleKiller() {

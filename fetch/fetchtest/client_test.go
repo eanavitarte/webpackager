@@ -21,8 +21,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/eanavitarte/webpackager/fetch/fetchtest"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/fetch/fetchtest"
 )
 
 func TestFetchClient(t *testing.T) {

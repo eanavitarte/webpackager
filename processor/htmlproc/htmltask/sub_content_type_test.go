@@ -17,9 +17,9 @@ package htmltask_test
 import (
 	"testing"
 
+	"github.com/eanavitarte/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmltask"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/exchange"
-	"github.com/google/webpackager/processor/htmlproc/htmltask"
 )
 
 func TestExtractSubContentTypes(t *testing.T) {

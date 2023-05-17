@@ -19,10 +19,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/google/webpackager/certchain"
-	"github.com/google/webpackager/certchain/certmanager/futureevent"
-	"github.com/google/webpackager/internal/chanutil"
-	"github.com/google/webpackager/internal/timeutil"
+	"github.com/eanavitarte/webpackager/certchain"
+	"github.com/eanavitarte/webpackager/certchain/certmanager/futureevent"
+	"github.com/eanavitarte/webpackager/internal/chanutil"
+	"github.com/eanavitarte/webpackager/internal/timeutil"
 )
 
 // Augmentor combines RawChainSource and OCSPRespSource to serve as a Producer.

@@ -17,8 +17,8 @@ package preverify
 import (
 	"net/http"
 
-	"github.com/google/webpackager/exchange"
-	"github.com/google/webpackager/processor"
+	"github.com/eanavitarte/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/processor"
 )
 
 // HTTPStatusOK ensures the response to have the status code 200 (OK).

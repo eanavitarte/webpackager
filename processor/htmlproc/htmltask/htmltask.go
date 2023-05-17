@@ -23,7 +23,7 @@ htmlproc.NewHTMLProcessor to define its processing logic.
 package htmltask
 
 import (
-	"github.com/google/webpackager/processor/htmlproc/htmldoc"
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmldoc"
 )
 
 // HTMLTask manipulates HTMLResponse to optimize the page loading.

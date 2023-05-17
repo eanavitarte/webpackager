@@ -25,13 +25,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/eanavitarte/webpackager/certchain/certmanager"
+	"github.com/eanavitarte/webpackager/certchain/certmanager/acmeclient"
+	"github.com/eanavitarte/webpackager/certchain/certmanager/futureevent"
+	"github.com/eanavitarte/webpackager/internal/certchaintest"
 	"github.com/go-acme/lego/v3/acme"
 	"github.com/go-acme/lego/v3/platform/tester"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/certchain/certmanager"
-	"github.com/google/webpackager/certchain/certmanager/acmeclient"
-	"github.com/google/webpackager/certchain/certmanager/futureevent"
-	"github.com/google/webpackager/internal/certchaintest"
 	jose "gopkg.in/square/go-jose.v2"
 )
 

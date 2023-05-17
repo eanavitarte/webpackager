@@ -21,16 +21,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/webpackager"
-	"github.com/google/webpackager/exchange"
-	"github.com/google/webpackager/exchange/vprule"
-	"github.com/google/webpackager/fetch"
-	"github.com/google/webpackager/fetch/fetchtest"
-	"github.com/google/webpackager/internal/certchaintest"
-	"github.com/google/webpackager/internal/urlutil"
-	"github.com/google/webpackager/processor/complexproc"
-	"github.com/google/webpackager/processor/htmlproc"
-	"github.com/google/webpackager/processor/htmlproc/htmltask"
+	"github.com/eanavitarte/webpackager"
+	"github.com/eanavitarte/webpackager/exchange"
+	"github.com/eanavitarte/webpackager/exchange/vprule"
+	"github.com/eanavitarte/webpackager/fetch"
+	"github.com/eanavitarte/webpackager/fetch/fetchtest"
+	"github.com/eanavitarte/webpackager/internal/certchaintest"
+	"github.com/eanavitarte/webpackager/internal/urlutil"
+	"github.com/eanavitarte/webpackager/processor/complexproc"
+	"github.com/eanavitarte/webpackager/processor/htmlproc"
+	"github.com/eanavitarte/webpackager/processor/htmlproc/htmltask"
 )
 
 var (

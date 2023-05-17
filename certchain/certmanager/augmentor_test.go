@@ -17,11 +17,11 @@ package certmanager_test
 import (
 	"testing"
 
+	"github.com/eanavitarte/webpackager/certchain"
+	"github.com/eanavitarte/webpackager/certchain/certmanager"
+	"github.com/eanavitarte/webpackager/certchain/certmanager/futureevent"
+	"github.com/eanavitarte/webpackager/internal/certchaintest"
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/webpackager/certchain"
-	"github.com/google/webpackager/certchain/certmanager"
-	"github.com/google/webpackager/certchain/certmanager/futureevent"
-	"github.com/google/webpackager/internal/certchaintest"
 )
 
 func TestFactory(t *testing.T) {
