@@ -17,6 +17,7 @@ package acmeclient
 import (
 	"crypto/x509"
 	"errors"
+	"fmt"
 	"log"
 	"strconv"
 	"time"
@@ -142,8 +143,13 @@ func NewClient(config Config) (*Client, error) {
 	if config.HTTPChallengePort != 0 {
 		s := http01.NewProviderServer("", strconv.Itoa(config.HTTPChallengePort))
 		if err := legoClient.Challenge.SetHTTP01Provider(s); err != nil {
+			fmt.Println("Problems setting HTTPChallengePort")
 			return nil, xerrors.Errorf("setting up HTTP01 challenge provider: %w", err)
+		} else {
+			fmt.Println("Set HTTPChallengePort")
 		}
+	} else {
+		fmt.Println("No HTTPChallengePort provided")
 	}
 	if config.HTTPWebRootDir != "" {
 		httpProvider, err := webroot.NewHTTPProvider(config.HTTPWebRootDir)
