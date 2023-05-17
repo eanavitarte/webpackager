@@ -208,6 +208,8 @@ func makeCertManager(c *tomlconfig.Config) (*certmanager.Manager, error) {
 		})
 		if err != nil {
 			return nil, err
+		} else {
+			fmt.Println("Succesfully created ACME Client")
 		}
 	} else {
 		rcs = certmanager.NewLocalCertFile(certmanager.LocalCertFileConfig{
