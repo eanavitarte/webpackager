@@ -257,8 +257,7 @@ func (c *Client) Fetch(chain *certchain.RawChain, now func() time.Time) (newChai
 
 	// Each resource comes back with the cert bytes, the bytes of the client's
 	// private key, and a certificate URL.
-	fmt.Println("Obtaining new Certs")
-	fmt.Println(c.LegoClient.Certificate)
+	fmt.Println("[OK] Obtaining new Certs")
 	resource, err := c.LegoClient.Certificate.ObtainForCSR(*c.CertSignRequest, true)
 	if err != nil {
 		return nil, c.FetchTiming.GetNextRun(), err
@@ -267,18 +266,27 @@ func (c *Client) Fetch(chain *certchain.RawChain, now func() time.Time) (newChai
 	if resource == nil || resource.Certificate == nil {
 		err = errors.New("acmeclient: no certificate returned")
 		return nil, c.FetchTiming.GetNextRun(), err
+	} else {
+		fmt.Println("[OK] ACME Client: certificate returned")
 	}
 
 	newChain, err = certchain.NewRawChainFromPEM(resource.Certificate)
 	if err != nil {
 		return nil, c.FetchTiming.GetNextRun(), err
+	} else {
+		fmt.Println("[OK] New RawChain created")
 	}
 
 	if err := newChain.VerifyChain(now()); err != nil {
 		return nil, c.FetchTiming.GetNextRun(), err
+	} else {
+		fmt.Println("[OK] New RawChain verified")
 	}
+
 	if err := newChain.VerifySXGCriteria(); err != nil {
 		return nil, c.FetchTiming.GetNextRun(), err
+	} else {
+		fmt.Println("[OK] New RawChain verified for SXG")
 	}
 
 	return newChain, c.FetchTiming.GetNextRun(), nil

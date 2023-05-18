@@ -198,6 +198,9 @@ func (task *packagerTask) createExchange(rawResp *http.Response) (*signedexchang
 		return nil, err
 	}
 	if _, err := task.sxgFactory.Verify(sxg, task.date); err != nil {
+		log.Printf("Error while creating a signed exchange for %s", rawResp.Request.URL)
+		log.Println(sxg)
+		log.Println(task.date)
 		return nil, err
 	}
 
