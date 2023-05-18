@@ -260,10 +260,14 @@ func (c *Client) Fetch(chain *certchain.RawChain, now func() time.Time) (newChai
 	fmt.Println("[OK] Obtaining new Certs")
 	resource, err := c.LegoClient.Certificate.ObtainForCSR(*c.CertSignRequest, true)
 	if err != nil {
+		fmt.Println("[--] Error: returning certificate")
 		return nil, c.FetchTiming.GetNextRun(), err
+	} else {
+		fmt.Println("[OK] ACME Client: answer for certificate fetched")
 	}
 
 	if resource == nil || resource.Certificate == nil {
+		fmt.Println("[--] Error: acmeclient: no certificate returned")
 		err = errors.New("acmeclient: no certificate returned")
 		return nil, c.FetchTiming.GetNextRun(), err
 	} else {
