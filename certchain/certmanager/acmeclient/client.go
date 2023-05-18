@@ -141,6 +141,7 @@ func NewClient(config Config) (*Client, error) {
 	}
 
 	if config.HTTPChallengePort != 0 {
+
 		s := http01.NewProviderServer("", strconv.Itoa(config.HTTPChallengePort))
 		if err := legoClient.Challenge.SetHTTP01Provider(s); err != nil {
 			fmt.Println("Problems setting HTTPChallengePort")
@@ -148,17 +149,29 @@ func NewClient(config Config) (*Client, error) {
 		} else {
 			fmt.Println("Set HTTPChallengePort")
 		}
+
 	} else {
 		fmt.Println("No HTTPChallengePort provided")
 	}
+
 	if config.HTTPWebRootDir != "" {
 		httpProvider, err := webroot.NewHTTPProvider(config.HTTPWebRootDir)
 		if err != nil {
+			fmt.Println("Problems locating HTTPWebRootDir")
 			return nil, xerrors.Errorf("getting HTTP01 challenge provider: %w", err)
+		} else {
+			fmt.Println("Located HTTPWebRootDir")
 		}
+
 		if err := legoClient.Challenge.SetHTTP01Provider(httpProvider); err != nil {
+			fmt.Println("Problems setting HTTPWebRootDir")
 			return nil, xerrors.Errorf("setting up HTTP01 challenge provider: %w", err)
+		} else {
+			fmt.Println("Set HTTPWebRootDir")
 		}
+
+	} else {
+		fmt.Println("No HTTPWebRootDir provided")
 	}
 
 	if config.TLSChallengePort != 0 {
@@ -166,6 +179,8 @@ func NewClient(config Config) (*Client, error) {
 		if err := legoClient.Challenge.SetTLSALPN01Provider(s); err != nil {
 			return nil, xerrors.Errorf("setting up TLSALPN01 challenge provider: %w", err)
 		}
+	} else {
+		fmt.Println("No TLSChallengePort provided")
 	}
 
 	if config.DNSProvider != "" {
@@ -176,6 +191,8 @@ func NewClient(config Config) (*Client, error) {
 		if err := legoClient.Challenge.SetDNS01Provider(provider); err != nil {
 			return nil, xerrors.Errorf("setting up DNS01 challenge provider: %w", err)
 		}
+	} else {
+		fmt.Println("No DNSProvider provided")
 	}
 
 	var reg *registration.Resource
