@@ -87,11 +87,7 @@ func (p LinkParams) write(w io.Writer) {
 		return keys[i] < keys[j]
 	})
 	for _, key := range keys {
-		if shouldElideValue(key, p[key]) {
-			fmt.Fprintf(w, ";%s", key)
-		} else {
-			fmt.Fprintf(w, ";%s=%q", key, p[key])
-		}
+		fmt.Fprintf(w, ";%s=%q", key, p[key])
 	}
 }
 
@@ -122,10 +118,4 @@ func normalizeValue(key, val string) string {
 	default:
 		return val // Do not normalize unknown parameters.
 	}
-}
-
-func shouldElideValue(key, val string) bool {
-	// Elide the value from `crossorigin="anonymous"` since the bare
-	// `crossorigin` is presumably more popular.
-	return key == ParamCrossOrigin && val == CrossOriginAnonymous
 }
