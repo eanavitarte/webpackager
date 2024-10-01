@@ -20,6 +20,7 @@ import (
 	"net/http"
 	"net/url"
 	"path"
+	"regexp"
 	"strings"
 
 	"github.com/eanavitarte/webpackager"
@@ -167,6 +168,22 @@ func (h *Handler) handleDocImpl(w http.ResponseWriter, req *http.Request, signUR
 			return
 		}
 		if err != nil {
+
+			// Regular expression pattern to capture the status code
+			pattern := `error with processing https?://[\w\-\.]+(:[0-9]+)?(/[\w\-\./?%&=]*)?: server responded with status code (\d+)`
+			// Compile the regular expression
+			re := regexp.MustCompile(pattern)
+			// Find the matched groups
+			matches := re.FindStringSubmatch(err.Error())
+			if len(matches) > 0 {
+				// matches[0] is the full match
+				statusCode := matches[3] // The third capturing group is the status code
+				if statusCode == "404" {
+					replyError(w, 404)
+					return
+				}
+			}
+
 			replyServerError(w, xerrors.Errorf("Packager.RunForRequest: %w", err))
 			return
 		}
