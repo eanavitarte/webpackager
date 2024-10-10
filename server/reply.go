@@ -48,3 +48,8 @@ func replyClientErrorSilent(w http.ResponseWriter) {
 func replyError(w http.ResponseWriter, code int) {
 	http.Error(w, fmt.Sprintf("%d %s", code, http.StatusText(code)), code)
 }
+
+func replyRedir(w http.ResponseWriter, to string) {
+	w.Header().Set("Location", to)
+	w.WriteHeader(http.StatusMovedPermanently)
+}

@@ -183,6 +183,19 @@ func (h *Handler) handleDocImpl(w http.ResponseWriter, req *http.Request, signUR
 			return
 		}
 
+		// Regular expression pattern to capture redirections
+		pattern2 := `error with processing https?://[\w\-\.]+(:[0-9]+)?(/[\w\-\./?%&=]*)?: redirected to #(.*)#`
+		// Compile the regular expression
+		re2 := regexp.MustCompile(pattern2)
+		// Find the matched groups
+		matches2 := re2.FindStringSubmatch(err.Error())
+		if len(matches2) > 0 {
+			// matches[0] is the full match
+			redir := matches2[3] // The third capturing group is the status code
+			replyRedir(w, redir)
+			return
+		}
+
 		if xerrors.Is(err, fetch.ErrURLMismatch) {
 			replyClientErrorSilent(w)
 			return
