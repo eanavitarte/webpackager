@@ -69,6 +69,7 @@ func (pkg *Packager) RunForRequest(req *http.Request, sxgDate time.Time) (*resou
 	}
 	r := resource.NewResource(req.URL)
 	runner.run(nil, req, r)
+	// TODO Edwin? maybe the error handler must be here
 	if err != nil {
 		return nil, xerrors.Errorf("processing: %w", err)
 	}

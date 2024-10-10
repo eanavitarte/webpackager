@@ -84,7 +84,7 @@ func (runner *packagerTaskRunner) run(parent *packagerTask, req *http.Request, r
 	if err != nil {
 		err = WrapError(err, r.RequestURL)
 		runner.errs = multierror.Append(runner.errs, err)
-		log.Print(err)
+		log.Print("packagerTaskRunner.run", err)
 	}
 }
 

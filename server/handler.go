@@ -17,10 +17,12 @@ package server
 import (
 	"bytes"
 	"errors"
+	"log"
 	"net/http"
 	"net/url"
 	"path"
 	"regexp"
+	"strconv"
 	"strings"
 
 	"github.com/eanavitarte/webpackager"
@@ -28,7 +30,6 @@ import (
 	"github.com/eanavitarte/webpackager/fetch"
 	"github.com/eanavitarte/webpackager/internal/timeutil"
 	"github.com/eanavitarte/webpackager/internal/urlutil"
-	"github.com/eanavitarte/webpackager/processor/preverify"
 	"github.com/eanavitarte/webpackager/server/tomlconfig"
 	"github.com/hashicorp/go-multierror"
 	"golang.org/x/xerrors"
@@ -159,31 +160,34 @@ func (h *Handler) handleDocImpl(w http.ResponseWriter, req *http.Request, signUR
 		err = filterError(err, u.String())
 		// TODO(banaag): ideally, we should pass through that error response
 		// from the upstream.
-		if httpErr, ok := err.(*preverify.HTTPStatusError); ok {
-			replyError(w, httpErr.StatusCode)
+		// if httpErr, ok := err.(*preverify.HTTPStatusError); ok {
+		// 	replyError(w, httpErr.StatusCode)
+		// 	return
+		// }
+		// This do the same as the last one supposed to do, but indeed works
+		// Regular expression pattern to capture the status code
+		pattern := `error with processing https?://[\w\-\.]+(:[0-9]+)?(/[\w\-\./?%&=]*)?: server responded with status code (\d+)`
+		// Compile the regular expression
+		re := regexp.MustCompile(pattern)
+		// Find the matched groups
+		matches := re.FindStringSubmatch(err.Error())
+		if len(matches) > 0 {
+			// matches[0] is the full match
+			statusCode := matches[3] // The third capturing group is the status code
+			numCode, err := strconv.Atoi(statusCode)
+			if err != nil {
+				log.Printf("converting Atoi, code: %s", statusCode)
+				numCode = http.StatusInternalServerError
+			}
+			replyError(w, numCode)
 			return
 		}
+
 		if xerrors.Is(err, fetch.ErrURLMismatch) {
 			replyClientErrorSilent(w)
 			return
 		}
 		if err != nil {
-
-			// Regular expression pattern to capture the status code
-			pattern := `error with processing https?://[\w\-\.]+(:[0-9]+)?(/[\w\-\./?%&=]*)?: server responded with status code (\d+)`
-			// Compile the regular expression
-			re := regexp.MustCompile(pattern)
-			// Find the matched groups
-			matches := re.FindStringSubmatch(err.Error())
-			if len(matches) > 0 {
-				// matches[0] is the full match
-				statusCode := matches[3] // The third capturing group is the status code
-				if statusCode == "404" {
-					replyError(w, 404)
-					return
-				}
-			}
-
 			replyServerError(w, xerrors.Errorf("Packager.RunForRequest: %w", err))
 			return
 		}
